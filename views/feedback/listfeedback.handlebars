@@ -1,0 +1,44 @@
+  <div class="col-12 tm-block-col">
+    <div class="tm-bg-primary-dark tm-block tm-block-taller tm-block-scroll">
+        <h2 class="tm-block-title">Feedback List</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Comment</th>
+                        <th scope="col">Status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+            {{#if feedbacks}}
+                {{!-- <tbody> --}}
+                    {{#each feedbacks}}
+                        <tr>
+							<th scope="col">
+								{{rating}}
+							</th>
+							<th scope="col">
+								{{comment}}
+							</th>
+                            <th scope="col">
+                            <a href="/edit/{{id}}" class="card-link">
+								<i class="fas fa-pencil-alt"></i>
+								{{status}}
+							</a>
+                            </th>
+
+                            <th scope = "col">
+                            <a href="/delete/{{id}}" class="card-link" data-toggle="confirmation" data-title="Confirm delete?">
+                            <i class="far fa-trash-alt">Delete</i>
+                            </a>
+                            </th>
+                        </tr>
+                    {{/each}}
+                {{!-- </tbody> --}}
+            {{else}}
+            </table>
+        </div>
+    </div>
+  <h3 class ="tm-block-title ">No Rating and Comment</h3>
+{{/if}}
+                     

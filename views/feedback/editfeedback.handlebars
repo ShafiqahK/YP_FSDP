@@ -1,0 +1,16 @@
+<!--.col-	.col-sm-	.col-md-	.col-lg-	.col-xl- -->
+<div class="container">
+	<div class="card card-body">
+		<h3>Edit Feedback</h3>
+		<form action="/saveEditedFeedback/{{feedback.id}}?_method=PUT" method="post">
+			<input type="hidden" name="_method" value="PUT">
+			<div class="form-group">
+				<label class="font-italic" for="title">Status</label>
+				<input type="text" class="form-control" name="status" value="{{feedback.status}}" required>
+			</div>		
+			<br>
+			<button id="butEditFeedback" type="submit" class="btn btn-primary">Save</button>
+		</form>
+	</div>
+</div>
+

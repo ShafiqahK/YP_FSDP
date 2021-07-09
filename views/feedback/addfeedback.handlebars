@@ -1,0 +1,63 @@
+<!--Modal Launch Button-->
+<button type="button" class="btn btn-info btn-lg openmodal" data-toggle="modal" data-target="#myModal" style="background-color: steelblue;">Click here to give us Feedback</button>
+<!--Division for Modal-->
+<form action="/addfeedback" method="post" id="addfeedback">
+
+<div id="myModal" class="modal fade" role="dialog">
+    <!--Modal-->
+    <div class="modal-dialog">
+        <!--Modal Content-->
+        <div class="modal-content">
+            <!-- Modal Header-->
+            <div class="modal-header">
+                <h3>Feedback Request</h3>
+                <!--Close/Cross Button--> <button type="button" class="close" data-dismiss="modal" style="color: white;">&times;</button>
+            </div> <!-- Modal Body-->
+            <div class="modal-body text-center"> <i class="far fa-file-alt fa-4x mb-3 animated rotateIn icon1"></i>
+                <h3>Your opinion matters</h3>
+                <h5>Help us improve our site? <strong>Give us your feedback.</strong></h5>
+                <hr>
+            
+            </div> <!-- Radio Buttons for Rating-->
+            <div class="col-12 col-sm-12 ">
+						<label class="font-italic">Your Rating</label>
+						<br>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="Very good" value="Very good" name="rating" checked>
+							<label class="form-check-label" for="Very good">Very good</label>
+						</div>
+                        <br>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="Good" value="Good" name="rating">
+							<label class="form-check-label" for="Good">Good</label>
+						</div>
+                        <br>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="Mediocre" value="Mediocre" name="rating">
+							<label class="form-check-label" for="Mediocre">Mediocre</label>
+						</div>
+                        <br>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="Bad" value="Bad" name="rating">
+							<label class="form-check-label" for="Bad">Bad</label>
+						</div>
+                        <br>
+						<div class="form-check form-check-inline">
+							<input class="form-check-input" type="radio" id="Very Bad" value="Very Bad" name="rating">
+							<label class="form-check-label" for="Very Bad">Very Bad</label>
+						</div>
+                        <br>
+					</div>
+            <!--Text Message-->
+            <div class="form-group">
+                <label class="font-italic" for="comment"> </label>What could we improve?</label> <br>
+                <textarea class="form-control" id="comment" name="comment" placeholder="Your message..." rows="4" style="color:black;"></textarea>
+            </div> 
+            
+<!-- Modal Footer-->
+			<button id="butaddfeedback" type="submit" class="btn btn-primary">Send <i class="fa fa-paper-plane"></i></button>
+            <a href="" class="btn btn-outline-primary" data-dismiss="modal">Cancel</a></div>
+        </div>
+    </div>
+</div>
+</form>
